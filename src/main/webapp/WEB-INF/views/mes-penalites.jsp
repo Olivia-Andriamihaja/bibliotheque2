@@ -30,7 +30,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #4c74af;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -48,7 +48,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #604caf;
             color: #fff;
             font-weight: bold;
         }
@@ -58,11 +58,11 @@
         }
         
         .sidebar .btn-emprunt:hover {
-            background: #388e3c;
+            background: #38418e;
         }
         
         .sidebar a.active {
-            background: #4CAF50;
+            background: #4c66af;
         }
         
         .sidebar form {
@@ -110,7 +110,7 @@
         }
         
         h2 {
-            color: #4CAF50;
+            color: #4c65af;
             font-size: 24px;
             margin-bottom: 20px;
         }

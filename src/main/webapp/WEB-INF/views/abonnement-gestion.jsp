@@ -127,7 +127,7 @@
         }
 
         .btn-success {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #2e63cc, #2746ae);
             color: white;
         }
 
@@ -156,8 +156,8 @@
 
         .alert-success {
             background: rgba(46, 204, 113, 0.1);
-            border: 1px solid #2ecc71;
-            color: #27ae60;
+            border: 1px solid #2e65cc;
+            color: #2754ae;
         }
 
         .alert-error {
@@ -184,7 +184,7 @@
         }
 
         .status-active {
-            background: #2ecc71;
+            background: #2e63cc;
             color: white;
         }
 

@@ -31,7 +31,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #4c57af;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -49,7 +49,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #6f4caf;
             color: #fff;
             font-weight: bold;
         }
@@ -63,7 +63,7 @@
         }
         
         .sidebar a.active {
-            background: #4CAF50;
+            background: #4c5caf;
         }
         
         .sidebar form {
@@ -128,7 +128,7 @@
         }
         
         .reservation-item.active {
-            border-color: #4CAF50;
+            border-color: #4c4caf;
             background: #f8fff8;
         }
         

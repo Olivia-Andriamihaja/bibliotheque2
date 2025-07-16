@@ -30,7 +30,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #5c4caf;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -48,7 +48,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #4c74af;
             color: #fff;
             font-weight: bold;
         }
@@ -58,7 +58,7 @@
         }
         
         .sidebar .btn-emprunt:hover {
-            background: #388e3c;
+            background: #39388e;
         }
         
         .sidebar form {
@@ -160,7 +160,7 @@
         }
         
         .btn-reserver {
-            background: #4CAF50;
+            background: #4c51af;
             color: white;
             border: none;
             padding: 10px 20px;
@@ -173,7 +173,7 @@
         }
         
         .btn-reserver:hover {
-            background: #45a049;
+            background: #454ba0;
         }
         
         .btn-annuler {
@@ -215,7 +215,7 @@
         
         .status-libre {
             background: #d4edda;
-            color: #155724;
+            color: #191557;
         }
         
         .status-reserve {

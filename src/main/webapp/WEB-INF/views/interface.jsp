@@ -51,7 +51,7 @@
                 <td>${livre.auteur}</td>
                 <td>${livre.image}</td>
                 <td>
-                    <button type="button" onclick="openModal(${livre.id})">Réserver</button>
+                    <button type="button" onclick="openModal('${livre.id}')">Réserver</button>
                 </td>
             </tr>
         </c:forEach>

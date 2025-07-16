@@ -72,7 +72,7 @@
         }
 
         .status-active {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #2e6bcc, #2749ae);
             color: white;
         }
 
@@ -104,7 +104,7 @@
         }
 
         .btn-success {
-            background: linear-gradient(135deg, #2ecc71, #27ae60);
+            background: linear-gradient(135deg, #2e7dcc, #2761ae);
             color: white;
         }
 

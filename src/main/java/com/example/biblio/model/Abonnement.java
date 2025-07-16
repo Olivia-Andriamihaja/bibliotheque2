@@ -46,4 +46,5 @@ public class Abonnement {
     public LocalDate getDateDebutAbonnement() { return dateDebutAbonnement; }
     public void setDateDebutAbonnement(LocalDate dateDebutAbonnement) { this.dateDebutAbonnement = dateDebutAbonnement; }
 
+    
 }

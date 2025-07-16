@@ -33,7 +33,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #4c66af;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -51,7 +51,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #4c6daf;
             color: #fff;
             font-weight: bold;
         }
@@ -65,7 +65,7 @@
         }
         
         .sidebar a.active {
-            background: #4CAF50;
+            background: #4c51af;
         }
         
         .sidebar form {
@@ -117,7 +117,7 @@
         }
         
         h2 {
-            color: #4CAF50;
+            color: #514caf;
             font-size: 24px;
             margin-bottom: 20px;
             text-align: center;
@@ -145,11 +145,11 @@
         
         input:focus, select:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #4c53af;
         }
         
         .btn-submit {
-            background: #4CAF50;
+            background: #4c53af;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -162,7 +162,7 @@
         }
         
         .btn-submit:hover {
-            background: #45a049;
+            background: #456ba0;
         }
         
         /* Responsive */
@@ -240,8 +240,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <form:label path="nombreMoisAbonnement">Durée (mois) :</form:label>
-                    <form:input path="nombreMoisAbonnement" type="number" min="1" max="24" required="true"/>
+                    <form:label path="nombreJourAbonnement">Durée (mois) :</form:label>
+                    <form:input path="nombreJourAbonnement" type="number" min="1" max="24" required="true"/>
                 </div>
                 <div class="form-group">
                     <form:label path="dateDebutAbonnement">Date de début :</form:label>

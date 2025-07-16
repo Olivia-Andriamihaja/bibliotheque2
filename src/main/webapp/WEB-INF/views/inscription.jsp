@@ -6,7 +6,7 @@
     <title>Inscription</title>
     <style>
         body {
-            background: linear-gradient(120deg, #4CAF50 0%, #2196F3 100%);
+            background: linear-gradient(120deg, #4c5eaf 0%, #2196F3 100%);
             min-height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -59,7 +59,7 @@
             box-shadow: 0 0 8px rgba(33,150,243,0.2);
         }
         input[type="submit"] {
-            background: linear-gradient(90deg, #4CAF50 0%, #2196F3 100%);
+            background: linear-gradient(90deg, #4c68af 0%, #2196F3 100%);
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -71,7 +71,7 @@
             transition: all 0.3s ease;
         }
         input[type="submit"]:hover {
-            background: linear-gradient(90deg, #2196F3 0%, #4CAF50 100%);
+            background: linear-gradient(90deg, #2196F3 0%, #4c60af 100%);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }

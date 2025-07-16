@@ -30,7 +30,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #604caf;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -48,7 +48,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #4c6aaf;
             color: #fff;
             font-weight: bold;
         }
@@ -62,7 +62,7 @@
         }
         
         .sidebar a.active {
-            background: #4CAF50;
+            background: #4c75af;
         }
         
         .sidebar form {
@@ -110,7 +110,7 @@
         }
         
         h2, h3 {
-            color: #4CAF50;
+            color: #4c53af;
             margin-bottom: 20px;
         }
         
@@ -144,7 +144,7 @@
         .param-value {
             font-size: 1.5em;
             font-weight: bold;
-            color: #4CAF50;
+            color: #4c7faf;
         }
         
         .param-description {
@@ -170,11 +170,11 @@
         
         .param-input:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #4c68af;
         }
         
         .btn-update {
-            background: #4CAF50;
+            background: #4c56af;
             color: #fff;
             border: none;
             padding: 8px 16px;

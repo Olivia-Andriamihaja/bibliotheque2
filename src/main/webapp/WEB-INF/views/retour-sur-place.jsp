@@ -30,7 +30,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #4c4caf;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -48,7 +48,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #5c4caf;
             color: #fff;
             font-weight: bold;
         }
@@ -58,7 +58,7 @@
         }
         
         .sidebar .btn-emprunt:hover {
-            background: #388e3c;
+            background: #383b8e;
         }
         
         .sidebar form {
@@ -99,7 +99,7 @@
         }
         
         h2 {
-            color: #4CAF50;
+            color: #4c6aaf;
             margin-top: 0;
         }
         
@@ -122,12 +122,12 @@
         
         select:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #4c59af;
             box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
         }
         
         button {
-            background: #4CAF50;
+            background: #4c60af;
             color: #fff;
             border: none;
             font-weight: bold;
@@ -136,7 +136,7 @@
         }
         
         button:hover {
-            background: #388e3c;
+            background: #38428e;
         }
         
         .empty {
@@ -149,7 +149,7 @@
         .btn-retour {
             display: block;
             width: 200px;
-            background: #4CAF50;
+            background: #4c6faf;
             color: #fff;
             text-align: center;
             padding: 12px 0;
@@ -161,7 +161,7 @@
         }
         
         .btn-retour:hover {
-            background: #388e3c;
+            background: #38418e;
         }
         
         /* Responsive */

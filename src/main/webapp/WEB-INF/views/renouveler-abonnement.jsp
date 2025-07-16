@@ -151,7 +151,7 @@
 
         .alert-success {
             background: rgba(46, 204, 113, 0.1);
-            border: 1px solid #2ecc71;
+            border: 1px solid #1d549c;
             color: #27ae60;
         }
 

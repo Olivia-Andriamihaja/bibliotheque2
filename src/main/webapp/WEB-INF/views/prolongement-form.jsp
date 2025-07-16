@@ -31,7 +31,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #4c53af;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -49,7 +49,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #4c70af;
             color: #fff;
             font-weight: bold;
         }
@@ -122,7 +122,7 @@
         }
         
         .form-container h3 {
-            color: #4CAF50;
+            color: #4c51af;
             margin-top: 0;
             margin-bottom: 20px;
         }
@@ -151,14 +151,14 @@
         .form-group select:focus,
         .form-group input[type="number"]:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #4c60af;
             box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
         }
         
         .btn-submit {
             width: 100%;
             padding: 12px;
-            background: #4CAF50;
+            background: #4c6daf;
             color: #fff;
             border: none;
             border-radius: 4px;
@@ -169,7 +169,7 @@
         }
         
         .btn-submit:hover {
-            background: #45a049;
+            background: #4554a0;
         }
         
         .no-emprunts {
@@ -191,7 +191,7 @@
             margin-bottom: 15px;
             background: #f8f9fa;
             border-radius: 8px;
-            border-left: 4px solid #4CAF50;
+            border-left: 4px solid #4c63af;
         }
         
         .emprunt-left {

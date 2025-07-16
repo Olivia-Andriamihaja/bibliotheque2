@@ -30,7 +30,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #4c57af;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -48,7 +48,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #564caf;
             color: #fff;
             font-weight: bold;
         }
@@ -62,7 +62,7 @@
         }
         
         .sidebar a.active {
-            background: #4CAF50;
+            background: #534caf;
         }
         
         .sidebar form {
@@ -97,7 +97,7 @@
         }
         
         .main-content h2 {
-            color: #4CAF50;
+            color: #4c51af;
             font-size: 24px;
             margin-bottom: 20px;
             text-align: center;
@@ -135,11 +135,11 @@
         
         input:focus, select:focus {
             outline: none;
-            border-color: #4CAF50;
+            border-color: #4c57af;
         }
         
         button[type="submit"] {
-            background: #4CAF50;
+            background: #574caf;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -152,7 +152,7 @@
         }
         
         button[type="submit"]:hover {
-            background: #45a049;
+            background: #4578a0;
         }
         
         /* Responsive */

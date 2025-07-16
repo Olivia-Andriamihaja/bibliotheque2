@@ -31,7 +31,7 @@
         h1 {
             font-size: 2em;
             margin-bottom: 20px;
-            color: #2e7d32; /* vert pomme plus soutenu */
+            color: #2e557d; /* vert pomme plus soutenu */
         }
 
         p {
@@ -43,7 +43,7 @@
             display: inline-block;
             margin-top: 25px;
             padding: 12px 25px;
-            background-color: #66bb6a; /* vert pomme vif */
+            background-color: #6669bb; /* vert pomme vif */
             color: white;
             font-weight: bold;
             text-decoration: none;
@@ -52,7 +52,7 @@
         }
 
         a.button:hover {
-            background-color: #4caf50;
+            background-color: #514caf;
         }
     </style>
 </head>

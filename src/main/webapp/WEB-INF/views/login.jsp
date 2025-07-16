@@ -6,7 +6,7 @@
     <title>Connexion</title>
     <style>
         body {
-            background: linear-gradient(120deg, #4CAF50 0%, #2196F3 100%);
+            background: linear-gradient(120deg, #4c4eaf 0%, #2196F3 100%);
             min-height: 100vh;
             margin: 0;
             font-family: 'Segoe UI', Arial, sans-serif;
@@ -55,7 +55,7 @@
             box-shadow: 0 0 8px rgba(33,150,243,0.2);
         }
         .submit-btn {
-            background: linear-gradient(90deg, #4CAF50 0%, #2196F3 100%);
+            background: linear-gradient(90deg, #4c4caf 0%, #2196F3 100%);
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -68,7 +68,7 @@
             transition: all 0.3s ease;
         }
         .submit-btn:hover {
-            background: linear-gradient(90deg, #2196F3 0%, #4CAF50 100%);
+            background: linear-gradient(90deg, #2196F3 0%, #594caf 100%);
             transform: translateY(-2px);
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
@@ -96,7 +96,7 @@
             font-size: 0.9em;
         }
         .success-message {
-            color: #27ae60;
+            color: #274dae;
             background: #eafff0;
             padding: 10px;
             border-radius: 6px;

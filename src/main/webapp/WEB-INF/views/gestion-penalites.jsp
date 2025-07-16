@@ -30,7 +30,7 @@
         }
         
         .sidebar h2 {
-            color: #4CAF50;
+            color: #4c54af;
             margin-bottom: 30px;
             margin-top: 0;
         }
@@ -48,7 +48,7 @@
         }
         
         .sidebar a.btn-emprunt {
-            background: #4CAF50;
+            background: #4c6faf;
             color: #fff;
             font-weight: bold;
         }
@@ -58,11 +58,11 @@
         }
         
         .sidebar .btn-emprunt:hover {
-            background: #388e3c;
+            background: #38468e;
         }
         
         .sidebar a.active {
-            background: #4CAF50;
+            background: #4c4caf;
         }
         
         .sidebar form {
@@ -110,7 +110,7 @@
         }
         
         h2, h3 {
-            color: #4CAF50;
+            color: #4c63af;
             margin-bottom: 20px;
         }
         
@@ -176,7 +176,7 @@
         }
         
         .btn-verify {
-            background: #4CAF50;
+            background: #4c65af;
             color: #fff;
             border: none;
             padding: 10px 20px;
@@ -188,7 +188,7 @@
         }
         
         .btn-verify:hover {
-            background: #45a049;
+            background: #4548a0;
         }
         
         .config-info {
@@ -243,7 +243,7 @@
         .stat-number {
             font-size: 2em;
             font-weight: bold;
-            color: #4CAF50;
+            color: #4c4faf;
         }
         
         .stat-label {
