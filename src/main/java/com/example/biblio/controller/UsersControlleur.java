@@ -25,6 +25,13 @@ public class UsersControlleur {
     }
 
 
+    @GetMapping("/users/{id}/details")
+    @ResponseBody
+    public Users getUserWithAbonnements(@PathVariable Long id) {
+        return usersRepository.findByIdWithAbonnements(id).orElse(null);
+    }
+
+
     @GetMapping("/login")
     public String afficherFormulaireLogin(Model model,
         @RequestParam(required = false) String error,

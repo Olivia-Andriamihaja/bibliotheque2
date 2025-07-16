@@ -5,44 +5,21 @@
 <head>
     <title>Emprunter un livre</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
             padding: 0;
             display: flex;
             min-height: 100vh;
-            background: linear-gradient(135deg, #8B4513 0%, #D2691E 25%, #F4A460 50%, #DEB887 75%, #F5DEB3 100%);
-            font-family: 'Georgia', 'Times New Roman', serif;
-            position: relative;
+            background: #f7f7f7;
+            font-family: Arial, sans-serif;
         }
-
-        /* Effet de texture papier ancien */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                radial-gradient(circle at 20% 80%, rgba(120, 119, 108, 0.2) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(139, 69, 19, 0.15) 0%, transparent 50%);
-            pointer-events: none;
-            z-index: 1;
-        }
-
+        
         .sidebar {
-            width: 280px;
-            background: linear-gradient(180deg, #654321 0%, #8B4513 100%);
-            color: #F5DEB3;
+            width: 220px;
+            background: #222;
+            color: #fff;
             min-height: 100vh;
-            padding: 30px 20px;
+            padding: 30px 10px;
             box-sizing: border-box;
             display: flex;
             flex-direction: column;
@@ -51,336 +28,182 @@
             top: 0;
             left: 0;
             z-index: 1000;
-            box-shadow: 4px 0 20px rgba(0,0,0,0.3);
-            border-right: 3px solid #D2691E;
         }
-
-        .sidebar::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23D2691E' fill-opacity='0.1'%3E%3Cpath d='M20 0L0 20L20 40L40 20L20 0Z'/%3E%3C/g%3E%3C/svg%3E");
-            opacity: 0.3;
-        }
-
-        .sidebar-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .sidebar-logo {
-            width: 50px;
-            height: 50px;
-            background: linear-gradient(145deg, #D2691E, #F4A460);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-        }
-
-        .sidebar-logo::before {
-            content: '🏛️';
-            font-size: 24px;
-        }
-
+        
         .sidebar h2 {
-            color: #F5DEB3;
-            margin: 0;
-            font-size: 1.5em;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-            position: relative;
-            z-index: 2;
+            color: #4CAF50;
+            margin-bottom: 30px;
+            margin-top: 0;
         }
-
+        
         .sidebar a {
             display: block;
-            color: #F5DEB3;
+            color: #fff;
             text-decoration: none;
-            margin: 12px 0;
-            padding: 15px 20px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 2;
-            background: rgba(255,255,255,0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(245, 222, 179, 0.2);
-            font-weight: 500;
+            margin: 8px 0;
+            padding: 10px 15px;
+            border-radius: 4px;
+            transition: background 0.2 lost;
+            width: calc(100% - 30px);
+            box-sizing: border-box;
         }
-
-        .sidebar a::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(245, 222, 179, 0.1), transparent);
-            border-radius: 10px;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .sidebar a:hover::before {
-            opacity: 1;
-        }
-
+        
         .sidebar a.btn-emprunt {
-            background: linear-gradient(145deg, #D2691E, #F4A460);
-            color: #654321;
+            background: #4CAF50;
+            color: #fff;
             font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
-
+        
         .sidebar a:hover, .sidebar .btn-emprunt:hover {
-            background: linear-gradient(145deg, #F4A460, #D2691E);
-            color: #654321;
-            transform: translateX(5px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: #333;
         }
-
-        .sidebar a.active {
-            background: linear-gradient(145deg, #F4A460, #D2691E);
-            color: #654321;
-            font-weight: bold;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        
+        .sidebar .btn-emprunt:hover {
+            background: #388e3c;
         }
-
-        .btn-logout {
-            background: linear-gradient(145deg, #8B0000, #DC143C);
-            color: #F5DEB3;
-            border: none;
-            border-radius: 10px;
-            padding: 15px 20px;
-            margin-top: 30px;
-            cursor: pointer;
-            font-size: 1em;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            font-family: 'Georgia', serif;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            position: relative;
-            z-index: 2;
+        
+        .sidebar form {
+            margin-top: auto;
             width: 100%;
         }
-
+        
+        .btn-logout {
+            width: 100%;
+            padding: 10px 15px;
+            background: #d32f2f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background 0.2s;
+        }
+        
         .btn-logout:hover {
-            background: linear-gradient(145deg, #DC143C, #8B0000);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: #b71c1c;
         }
-
+        
         .main-content {
+            margin-left: 220px;
             flex: 1;
-            padding: 40px;
-            margin-left: 280px;
-            position: relative;
-            z-index: 2;
+            padding: 30px;
+            box-sizing: border-box;
         }
-
+        
+        .main-content h1 {
+            color: #333;
+            margin-bottom: 30px;
+            margin-top: 0;
+        }
+        
         .form-container {
             max-width: 600px;
-            margin: 20px auto;
-            padding: 25px;
-            background: linear-gradient(145deg, #FAEBD7, #F5F5DC);
-            border: 3px solid #D2691E;
-            border-radius: 20px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-            position: relative;
-            overflow: hidden;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            background: #fff;
         }
-
-        .form-container::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent, rgba(245, 222, 179, 0.3), transparent);
-            opacity: 0;
-            transition: opacity 0.3s ease;
-            z-index: 1;
-            pointer-events: none;
-        }
-
-        .form-container:hover::before {
-            opacity: 1;
-        }
-
-        .form-container h2 {
-            color: #654321;
-            font-size: 2em;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        
+        h2 {
+            color: #4CAF50;
+            font-size: 24px;
             margin-bottom: 20px;
-            text-align: center;
         }
-
-        .form-container h2::before {
-            content: '📖 ';
-            margin-right: 10px;
-        }
-
+        
         .form-group {
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 5;
+            margin-bottom: 15px;
         }
-
+        
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-weight: bold;
-            color: #654321;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+            color: #333;
         }
-
+        
+        select, input[type="radio"] {
+            margin: 8px 0;
+        }
+        
         select {
             width: 100%;
             padding: 10px;
-            border: 2px solid #D2691E;
-            border-radius: 10px;
-            font-size: 1em;
-            color: #654321;
-            font-family: 'Georgia', serif;
-            background: rgba(255, 255, 255, 0.8);
-            transition: all 0.3s ease;
-            position: relative;
-            z-index: 10;
-            outline: none;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
         }
-
+        
         select:focus {
-            border-color: #F4A460;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            background: #fff;
+            outline: none;
+            border-color: #4CAF50;
         }
-
+        
         .radio-group {
-            margin: 15px 0;
+            margin: 10px 0;
             display: flex;
-            align-items: center;
             gap: 20px;
         }
-
+        
         .radio-label {
             font-weight: normal;
-            color: #8B4513;
-            font-size: 1em;
-            display: flex;
-            align-items: center;
-            gap: 5px;
+            color: #333;
         }
-
+        
         input[type="radio"] {
-            width: 20px;
-            height: 20px;
-            accent-color: #D2691E;
             margin-right: 5px;
-            position: relative;
-            z-index: 10;
         }
-
+        
         .submit-btn {
-            background: linear-gradient(145deg, #228B22, #32CD32);
-            color: white;
+            background: #4CAF50;
+            color: #fff;
             padding: 10px 20px;
             border: none;
-            border-radius: 10px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 1em;
             font-weight: bold;
-            transition: all 0.3s ease;
-            font-family: 'Georgia', serif;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            position: relative;
-            z-index: 10;
-            overflow: hidden;
-        }
-
-        .submit-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
+            transition: background 0.2s;
             width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
-            transition: left 0.6s ease;
         }
-
-        .submit-btn:hover::before {
-            left: 100%;
-        }
-
+        
         .submit-btn:hover {
-            background: linear-gradient(145deg, #32CD32, #228B22);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: #45a049;
         }
-
+        
         .btn-retour {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 20px;
-            background: linear-gradient(145deg, #D2691E, #F4A460);
-            color: #654321;
+            display: block;
+            width: 100%;
+            background: #4CAF50;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            border-radius: 4px;
             text-decoration: none;
-            border-radius: 10px;
-            font-size: 1em;
             font-weight: bold;
-            transition: all 0.3s ease;
-            font-family: 'Georgia', serif;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-            position: relative;
-            z-index: 10;
+            margin-top: 20px;
+            transition: background 0.2s;
         }
-
+        
         .btn-retour:hover {
-            background: linear-gradient(145deg, #F4A460, #D2691E);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+            background: #45a049;
         }
-
+        
         .error-message {
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 15px;
-            font-size: 1.1em;
-            font-weight: 500;
             color: #721c24;
-            background: linear-gradient(145deg, #f8d7da, #f5c6cb);
-            border: 2px solid #dc3545;
-            position: relative;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            z-index: 5;
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            font-size: 0.9em;
         }
-
-        .error-message::before {
-            content: '❌ ';
-            font-size: 1.3em;
-            margin-right: 10px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1200px) {
-            .form-container {
-                padding: 20px;
-            }
-        }
-
+        
+        /* Responsive */
         @media (max-width: 768px) {
             .sidebar {
-                width: 100%;
                 position: static;
+                width: 100%;
                 min-height: auto;
                 padding: 20px;
             }
@@ -390,58 +213,39 @@
                 padding: 20px;
             }
             
-            .form-container {
-                margin: 10px;
-                padding: 15px;
+            body {
+                flex-direction: column;
             }
             
-            .form-container h2 {
-                font-size: 1.6em;
+            .form-container {
+                padding: 15px;
             }
         }
-
+        
         @media (max-width: 480px) {
             .form-container {
                 padding: 10px;
-            }
-            
-            .form-group {
-                margin-bottom: 15px;
-            }
-            
-            .submit-btn, .btn-retour {
-                width: 100%;
-                text-align: center;
-            }
-            
-            .radio-group {
-                flex-direction: column;
-                align-items: flex-start;
             }
         }
     </style>
 </head>
 <body>
     <div class="sidebar">
-        <div class="sidebar-header">
-            <div class="sidebar-logo"></div>
-            <h2>Menu</h2>
-        </div>
-        <a href="${pageContext.request.contextPath}/livres">🏠 Accueil</a>
+        <h2>Menu</h2>
+        <a href="${pageContext.request.contextPath}/livres">Accueil</a>
         <c:if test="${isAdmin}">
-            <a href="${pageContext.request.contextPath}/emprunt/nouveau" class="btn-emprunt active">📖 Emprunter un livre</a>
-            <a href="${pageContext.request.contextPath}/emprunt/retour-sur-place">📚 Retour lecture sur place</a>
-            <a href="${pageContext.request.contextPath}/emprunt/prolongement">⏰ Prolonger un emprunt</a>
-            <a href="${pageContext.request.contextPath}/penalite/gestion">⚖️ Gestion des pénalités</a>
-            <a href="${pageContext.request.contextPath}/penalite/parametres">⚙️ Paramètres des pénalités</a>
+            <a href="${pageContext.request.contextPath}/emprunt/nouveau" class="btn-emprunt">Emprunter un livre</a>
+            <a href="${pageContext.request.contextPath}/emprunt/retour-sur-place">Retour lecture sur place</a>
+            <a href="${pageContext.request.contextPath}/emprunt/prolongement">Prolonger un emprunt</a>
+            <a href="${pageContext.request.contextPath}/penalite/gestion">Gestion des pénalités</a>
+            <a href="${pageContext.request.contextPath}/penalite/parametres">Paramètres des pénalités</a>
         </c:if>
-        <a href="${pageContext.request.contextPath}/reservation/mes-reservations">📋 Mes réservations</a>
-        <a href="${pageContext.request.contextPath}/penalite/mes-penalites">💰 Mes pénalités</a>
+        <a href="${pageContext.request.contextPath}/reservation/mes-reservations">Mes réservations</a>
+        <a href="${pageContext.request.contextPath}/penalite/mes-penalites">Mes pénalités</a>
         <form action="${pageContext.request.contextPath}/logout" method="post" style="margin:0;">
-            <button type="submit" class="btn-logout">🚪 Déconnexion</button>
+            <button type="submit" class="btn-logout">Déconnexion</button>
         </form>
     </div>
-    
     <div class="main-content">
         <div class="form-container">
             <h2>Emprunter un livre</h2>
@@ -450,10 +254,10 @@
                 <div class="error-message">
                     <c:choose>
                         <c:when test="${param.error == 'penalite_active'}">
-                            ⚠️ Cet utilisateur a une pénalité active et ne peut pas emprunter de livres.
+                            Cet utilisateur a une pénalité active et ne peut pas emprunter de livres.
                         </c:when>
                         <c:when test="${param.error == 'notadmin'}">
-                            ❌ Accès refusé. Seuls les administrateurs peuvent emprunter des livres.
+                            Accès refusé. Seuls les administrateurs peuvent emprunter des livres.
                         </c:when>
                         <c:otherwise>
                             Une erreur s'est produite : ${param.error}

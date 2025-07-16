@@ -37,7 +37,7 @@ public class EmpruntService {
 
         // Créer l'emprunt
         LocalDateTime dateDebut = LocalDateTime.now();
-        LocalDateTime dateFin = dateDebut.plusMonths(profil.getNombreDeMois());
+        LocalDateTime dateFin = dateDebut.plusMonths(profil.getNombreDeJour());
 
         Emprunt emprunt = new Emprunt();
         emprunt.setLivre(livre);

@@ -2,7 +2,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Retour des lectures sur place</title>
+    <title>Retour des livres à emporter</title>
     <style>
         body {
             margin: 0;
@@ -61,6 +61,10 @@
             background: #388e3c;
         }
         
+        .sidebar a.active {
+            background: #4CAF50;
+        }
+        
         .sidebar form {
             margin-top: auto;
             width: 100%;
@@ -85,83 +89,70 @@
         .main-content {
             margin-left: 220px;
             flex: 1;
-            padding: 40px;
+            padding: 30px;
             box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         
-        .container {
-            max-width: 500px;
-            margin: 0 auto;
-            background: #fff;
+        .main-content h2 {
+            color: #4CAF50;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .form-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            border: 1px solid #ddd;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-            padding: 30px;
+            background: #fff;
         }
         
-        h2 {
-            color: #4CAF50;
-            margin-top: 0;
+        .form-group {
+            margin-bottom: 15px;
         }
         
         label {
             display: block;
-            margin-bottom: 8px;
+            margin-bottom: 5px;
             font-weight: bold;
             color: #333;
         }
         
-        select, button {
+        input, select {
             width: 100%;
-            padding: 12px;
-            margin: 0 0 20px 0;
-            border-radius: 4px;
+            padding: 10px;
             border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 0.9em;
             box-sizing: border-box;
-            font-size: 14px;
         }
         
-        select:focus {
+        input:focus, select:focus {
             outline: none;
             border-color: #4CAF50;
-            box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.2);
         }
         
-        button {
+        button[type="submit"] {
             background: #4CAF50;
             color: #fff;
             border: none;
-            font-weight: bold;
-            cursor: pointer;
-            transition: background 0.2s;
-        }
-        
-        button:hover {
-            background: #388e3c;
-        }
-        
-        .empty {
-            color: #888;
-            text-align: center;
-            font-style: italic;
-            margin-top: 20px;
-        }
-        
-        .btn-retour {
-            display: block;
-            width: 200px;
-            background: #4CAF50;
-            color: #fff;
-            text-align: center;
-            padding: 12px 0;
+            padding: 10px 20px;
             border-radius: 4px;
-            text-decoration: none;
+            cursor: pointer;
+            font-size: 0.9em;
             font-weight: bold;
-            margin: 30px auto 0 auto;
             transition: background 0.2s;
+            width: 100%;
         }
         
-        .btn-retour:hover {
-            background: #388e3c;
+        button[type="submit"]:hover {
+            background: #45a049;
         }
         
         /* Responsive */
@@ -182,8 +173,27 @@
                 flex-direction: column;
             }
             
-            .container {
-                padding: 20px;
+            .form-container {
+                margin: 20px;
+                padding: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .form-container {
+                padding: 10px;
+            }
+            
+            h2 {
+                font-size: 20px;
+            }
+            
+            input, select {
+                padding: 8px;
+            }
+            
+            button[type="submit"] {
+                padding: 8px 16px;
             }
         }
     </style>
@@ -201,32 +211,33 @@
         </c:if>
         <a href="${pageContext.request.contextPath}/reservation/mes-reservations">Mes réservations</a>
         <a href="${pageContext.request.contextPath}/penalite/mes-penalites">Mes pénalités</a>
-        <form action="${pageContext.request.contextPath}/logout" method="post">
+        <form action="${pageContext.request.contextPath}/logout" method="post" style="margin:0;">
             <button type="submit" class="btn-logout">Déconnexion</button>
         </form>
     </div>
     
     <div class="main-content">
-        <div class="container">
-            <h2>Retour d'un livre lu sur place</h2>
-            <form action="${pageContext.request.contextPath}/emprunt/retour-sur-place" method="post">
-                <label for="empruntId">Sélectionner la personne :</label>
-                <select name="empruntId" id="empruntId" required>
-                    <option value="">-- Choisir une personne --</option>
-                    <c:forEach items="${empruntsSurPlace}" var="e">
-                        <option value="${e.id}">${e.emprunteur.userName} (${e.livre.titre})</option>
-                    </c:forEach>
-                </select>
-                <label for="dateRetour">Date de retour :</label>
-                <input type="date" id="dateRetour" name="dateRetour" required>
+        <div class="form-container">
+            <h2>Retour d'un livre à emporter</h2>
+            <form action="${pageContext.request.contextPath}/emprunt/retour-emporter" method="post">
+                <div class="form-group">
+                    <label for="empruntId">Sélectionner l'emprunt :</label>
+                    <select name="empruntId" id="empruntId" required>
+                        <option value="">-- Choisir un emprunt --</option>
+                        <c:forEach items="${empruntsAEmporter}" var="e">
+                            <option value="${e.id}">
+                                ${e.emprunteur.userName} - ${e.livre.titre} (fin prévue : ${e.dateFinEmprunt.toLocalDate()})
+                            </option>
+                        </c:forEach>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="dateRendu">Date de rendu :</label>
+                    <input type="date" id="dateRendu" name="dateRendu" required>
+                </div>
                 <button type="submit">Valider le retour</button>
             </form>
-            <c:if test="${empty empruntsSurPlace}">
-                <p class="empty">Aucun emprunt sur place en cours.</p>
-            </c:if>
         </div>
-        
-        <a href="${pageContext.request.contextPath}/livres" class="btn-retour">Retour à la liste des livres</a>
     </div>
 </body>
 </html>

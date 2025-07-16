@@ -74,7 +74,7 @@ public class PenaliteService {
     /**
      * Crée une pénalité pour un emprunt en retard
      */
-    private void creerPenalitePourEmprunt(Emprunt emprunt, LocalDateTime maintenant) {
+    public void creerPenalitePourEmprunt(Emprunt emprunt, LocalDateTime maintenant) {
         if (emprunt.getDateFinEmprunt() == null) {
             return; // Pas de pénalité pour les emprunts sur place
         }

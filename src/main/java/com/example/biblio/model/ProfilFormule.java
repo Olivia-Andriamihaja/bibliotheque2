@@ -11,15 +11,15 @@ public class ProfilFormule {
     private Long id;
 
     private String profil;
-    private int nombreDeMois;
+    private int nombreDeJour;
     private int nblivrePort;
 
     public ProfilFormule() {}
 
-    public ProfilFormule(Long id, String profil, int nombreDeMois, int nblivrePort) {
+    public ProfilFormule(Long id, String profil, int nombreDeJour, int nblivrePort) {
         this.id = id;
         this.profil = profil;
-        this.nombreDeMois = nombreDeMois;
+        this.nombreDeJour = nombreDeJour;
         this.nblivrePort = nblivrePort;
     }
 
@@ -29,8 +29,8 @@ public class ProfilFormule {
     public String getProfil() { return profil; }
     public void setProfil(String profil) { this.profil = profil; }
 
-    public int getNombreDeMois() { return nombreDeMois; }
-    public void setNombreDeMois(int nombreDeMois) { this.nombreDeMois = nombreDeMois; }
+    public int getNombreDeJour() { return nombreDeJour; }
+    public void setNombreDeJour(int nombreDeJour) { this.nombreDeJour = nombreDeJour; }
 
     public int getNblivrePort() { return nblivrePort; }
     public void setNblivrePort(int nblivrePort) { this.nblivrePort = nblivrePort; }

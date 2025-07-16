@@ -33,6 +33,10 @@ public class Emprunt {
     @Column(name = "nombre_prolongement", nullable = false)
     private int nombreProlongement = 0;
 
+    @Column(name = "date_rendu")
+    private LocalDateTime dateRendu;
+
+
     public Emprunt() {}
 
     public Emprunt(Long id, Users emprunteur, Livre livre, LocalDateTime dateDebutEmprunt, LocalDateTime dateFinEmprunt, String typeDeLecture) {
@@ -81,4 +85,7 @@ public class Emprunt {
 
     public int getNombreProlongement() { return nombreProlongement; }
     public void setNombreProlongement(int nombreProlongement) { this.nombreProlongement = nombreProlongement; }
+
+    public LocalDateTime getDateRendu() { return dateRendu; }
+    public void setDateRendu(LocalDateTime dateRendu) { this.dateRendu = dateRendu; }
 }

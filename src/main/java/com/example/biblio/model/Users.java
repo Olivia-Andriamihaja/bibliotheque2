@@ -2,6 +2,8 @@ package com.example.biblio.model;
 
 import jakarta.persistence.*;
 import java.io.Serializable;
+import java.util.List;
+import java.util.ArrayList;
 
 @Entity
 @Table(name = "users")
@@ -17,6 +19,9 @@ public class Users implements Serializable {
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "profil_id")
     private ProfilFormule profilFormule;
+
+    @OneToMany(mappedBy = "utilisateur", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private List<Abonnement> abonnements = new ArrayList<>();
 
     // Constructeur par défaut
     public Users() {}
@@ -87,6 +92,14 @@ public class Users implements Serializable {
 
     public void setProfilFormule(ProfilFormule profilFormule) {
         this.profilFormule = profilFormule;
+    }
+
+    public List<Abonnement> getAbonnements() {
+        return abonnements;
+    }
+
+    public void setAbonnements(List<Abonnement> abonnements) {
+        this.abonnements = abonnements;
     }
 
     @Override
